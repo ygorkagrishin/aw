@@ -3,3 +3,93 @@
 
 @import 'layout/layout.styl';
 @import 'common/common_styles.styl';
+
+// features
+
+.feat__top
+    padding: 37px 0;
+    text-align: center;
+    background-color: primaryBlue;
+
+.feat__title
+    margin-bottom: 10px;
+    font-size: 23px;
+    color: #fff;
+
+.feat__text
+    max-width 95%
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1;
+    word-spacing: 5px;
+    color: #fff;
+
+// features section end
+
+// login section
+
+.login
+    overflow: hidden;
+
+.login__inner
+    padding: 100px 0 103px 0;
+
+.login__main
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+.login__figure
+    max-width 440px;
+    img
+        position: absolute;
+        top: -5%;
+        left: 5.5%;
+
+.login__cont
+    max-width: 570px;
+    padding-right: 74px;
+    text-align: right;
+
+.login__title
+    margin: 22% 0 20px 0;
+
+.login__text
+    p
+        font-size: 15px;
+        word-spacing: 2px;
+// login section end
+
+// menu section
+
+.menu
+    @extend .login;
+    background-color: primaryGrey;
+
+.menu__inner
+    padding: 100px 0 112px 0;
+
+.menu__main
+    @extend .login__main;
+
+.menu__cont
+    max-width: 580px;
+    padding-left: 84px;
+
+.menu__title
+    @extend .login__title;
+    margin-top: 20%;
+
+.menu__text
+    p
+        @extend .login__text p;
+
+.menu__figure
+    img 
+        position: absolute;
+        top: -5%;
+        right: 4.5%;
+
+
+// menu section end 
