@@ -65,8 +65,20 @@ block content
             // menu end
         // features end
 
+        // app gallery
+        section.gal
+            .gal__inner
+                article.container
+                    .gal__header.section__header
+                        span Check out
+                        h2.gal__title.section__title
+                            | App Gallery
+                    include ../includes/gallary.pug
+        // app gallery end  
+
         // testimonial
         section.test
             .test__inner
-                .container    
+                article.container    
                     include ../includes/slider.pug
+        // testimonial end
