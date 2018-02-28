@@ -8,22 +8,23 @@ block content
         // features
         section.feat
             section.feat__top
-                .container
-                    h2.feat__title.section__title 
-                        | Check out the superb features
-                    .feat__text
-                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                        | sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                        | aliquam erat volutpat. Ut wisi enim ad minim veniam, 
-                        | quis nostrud exerci tation ullamcorper suscipit lobortis 
+                .feat__inner
+                    .container
+                        h2.feat__title.section__title 
+                            | Check out the superb features
+                        .feat__text
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                            | sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                            | aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                            | quis nostrud exerci tation ullamcorper suscipit lobortis 
             // login
             section.login
                 .login__inner
-                    article.container
+                    article.container.container_size_m
                         .login__main
                             .login__figure  
                                 img(src="image/content/feature/black-phone.png", alt="")
-                            .login__cont
+                            .login__cont.login__helper
                                 h3.login__title.section__title
                                     | Login page with social Signups
                                 .login__text
@@ -43,7 +44,7 @@ block content
             // menu
             section.menu
                 .menu__inner
-                    article.container
+                    article.container.container_size_m
                         .menu__main
                             .menu__cont
                                 h3.menu__title.section__title
@@ -82,6 +83,30 @@ block content
                 article.container    
                     include ../includes/slider.pug
         // testimonial end
+
+        // newsletter
+        section.news
+            .news__inner
+                article.container.container_size_m
+                    .news__main
+                        .news__meta
+                            h2.news__title
+                                | Sign up to our Newsletter
+                            span 
+                                | Stay on par with out News and Updates
+                        .news__form-field
+                            form(action="action.php", method="post").news__form.form#form
+                                .news__row
+                                    .news__col
+                                        label(for="email") Email
+                                        input(type="text", name="email", placeholder="Email", id="email")
+                                    .news__col
+                                        label(for="name") Name
+                                        input(type="text", name="name", placeholder="Name", id="name")
+                                .news__btn.news__helper
+                                    button(type="submit") Subscribe
+
+        //newsletter end
 
         // footer
         include ../includes/footer.pug
