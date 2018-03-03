@@ -4,8 +4,48 @@
 @import 'layout/layout.styl';
 @import 'common/common_styles.styl';
 
-// features
 
+
+/* **************************** */
+// hero 
+/* **************************** */
+.hero
+    background: primaryGrey url('image/content/hero/gradient_map.png') no-repeat center / cover;
+    overflow: hidden;
+
+.hero__inner
+    padding: 160px 0;
+
+.hero__main
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+.hero__meta
+    max-width: 540px;
+    text-align: right;
+    color: #fff;
+
+.hero__title
+    margin-bottom: 20px;
+    font: 49px / 1 latoBlack;
+    text-transform: uppercase;
+
+.hero__text
+    font: 15px raleWayReg;
+
+.hero__figure
+    position: absolute;
+    top: 0;
+    right: -1%;
+/* **************************** */
+// hero end
+/* **************************** */
+
+/* **************************** */
+// features
+/* **************************** */
 .feat__top
     text-align: center;
     background-color: primaryBlue;
@@ -25,11 +65,15 @@
     line-height: 17px;
     word-spacing: 4px;
     color: #fff;
-
+/* **************************** */
 // features section end
+/* **************************** */
 
+
+
+/* **************************** */
 // login section
-
+/* **************************** */
 .login
     overflow: hidden;
 
@@ -39,17 +83,15 @@
 .login__main
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
 
 .login__figure
-    max-width 440px;
-    img
-        position: absolute;
-        top: -5%;
-        left: -2.7%;
+    position: absolute;
+    top: -5%;
+    left: -2.7%;
 
-.login__cont
+.login__meta
     max-width: 515px;
     text-align: right;
 
@@ -60,13 +102,17 @@
     margin: 21.3% 0 21px 0;
 
 .login__text
-    p
-        font-size: 15px;
-        word-spacing: 3px;
+    font-size: 15px;
+    word-spacing: 3px;
+/* **************************** */
 // login section end
+/* **************************** */
 
+
+
+/* **************************** */
 // menu section
-
+/* **************************** */
 .menu
     @extend .login;
     background-color: primaryGrey;
@@ -76,29 +122,31 @@
 
 .menu__main
     @extend .login__main;
+    justify-content: flex-start;
 
-.menu__cont
+.menu__meta
     max-width: 515px;
 
 .menu__title
     @extend .login__title;
     margin-top: 19.6%;
 
-.menu__text
-    p
-        @extend .login__text p;
+.menu__text 
+    @extend .login__text;
 
 .menu__figure
-    img 
-        position: absolute;
-        top: -5%;
-        right: -3.7%;
-
-
+    position: absolute;
+    top: -5%;
+    right: -3.7%;
+/* **************************** */
 // menu section end 
+/* **************************** */
 
+
+
+/* **************************** */
 // gallary
-
+/* **************************** */
 .gal
     background: primaryBlue url('image/content/gallary/gallary_bg.png') no-repeat center / cover;
     overflow: hidden;
@@ -112,11 +160,15 @@
     color: #fff;
 
 @import 'components/gallary.styl';
-
+/* **************************** */
 // gallary end
+/* **************************** */
 
+
+
+/* **************************** */
 // testimonial
-
+/* **************************** */
 .test
     background-color: primaryGrey;
 
@@ -124,11 +176,15 @@
     padding: 51px 0;
 
 @import 'components/slider.styl';
-
+/* **************************** */
 // testimonial end
+/* **************************** */
 
+
+
+/* **************************** */
 // newsletter
-
+/* **************************** */
 .news
     color: #fff;
     background: primaryBlack url('image/content/newsletter/newsletter__bg.png') no-repeat center / cover;
@@ -184,9 +240,16 @@
         border: none;
     .news__helper
         margin-right: -21px;
-
+/* **************************** */
 // newsletter end
+/* **************************** */
 
+
+
+/* **************************** */
 // footer
+/* **************************** */
 @import 'components/footer.styl';
+/* **************************** */
 // footer end
+/* **************************** */
