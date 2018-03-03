@@ -1,0 +1,120 @@
+/* **************************** */
+// hero 
+/* **************************** */
+.hero__inner
+    @media ( max-width 1024px )
+        padding: 0;
+
+.hero__main
+    @media ( max-width 1024px )
+        height: 100vh;
+        align-items: center;
+
+.hero__meta
+    @media ( max-width 1024px )
+        width: 100%;
+        text-align: center;
+
+.hero__btn
+    @media ( max-width 1024px )
+        padding: 0;
+        text-align: center;
+
+.hero__figure  
+    @media ( max-width 1024px )
+        display: none;
+/* **************************** */
+// hero end 
+/* **************************** */
+
+
+/* **************************** */
+// login 
+/* **************************** */
+.login__inner
+    @media ( max-width 840px )
+        padding: 0;
+
+.login__main
+    @media ( max-width 840px )
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 100vh;
+        padding: 20% 0;
+        & > div
+            width: 100%;
+
+.login__meta
+    @media ( max-width 840px )
+        text-align: center;
+        order: -1;
+
+.login__figure
+    @media ( max-width 840px )
+        order: 1;
+
+.login__figure img
+    @media ( max-width 840px )
+        top: 45%;
+        left: 29.3%;
+/* **************************** */
+// login end
+/* **************************** */
+
+
+
+/* **************************** */
+// menu
+/* **************************** */
+.menu__inner
+    @media ( max-width 840px )
+        @extend .login__inner;
+
+.menu__main
+    @media ( max-width 840px )
+        @extend .login__main;
+
+.menu__main > div
+    @media ( max-width 840px )
+        width: 100%;
+
+.menu__meta
+    @media ( max-width 840px )
+        @extend .login__meta;
+
+.menu__figure img
+    @media ( max-width 840px )
+        @extend .login__figure img;
+
+/* **************************** */
+// menu end 
+/* **************************** */
+
+
+/* **************************** */
+// news
+/* **************************** */
+.news__inner
+    @media ( max-width 840px )
+        @extend .login__inner;
+
+.news__main
+    @media ( max-width 840px )
+        @extend .login__main;
+        height: auto;
+
+.news__meta
+    @media ( max-width 840px )
+        @extend .login__meta;
+        margin-bottom: 5%;
+
+.news__form
+    @media ( max-width 840px )
+        text-align: center;
+        .news__row
+            margin-bottom: 10%;
+        .news__helper
+            margin: 0;
+/* **************************** */
+// news end 
+/* **************************** */

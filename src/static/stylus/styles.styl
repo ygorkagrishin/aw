@@ -8,7 +8,8 @@
 /* **************************** */
 // header 
 /* **************************** */
-@import 'components/header.styl';
+@import 'components/header/header.styl';
+@import 'components/header/media/media.styl';
 /* **************************** */
 // header end 
 /* **************************** */
@@ -17,7 +18,7 @@
 /* **************************** */
 // menu 
 /* **************************** */
-@import 'components/menu.styl';
+@import 'components/menu/menu.styl';
 /* **************************** */
 // menu end 
 /* **************************** */
@@ -37,7 +38,6 @@
 .hero__main
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
 
@@ -58,9 +58,10 @@
         margin-bottom: 43px;
 
 .hero__btn
-    display: flex;
-    justify-content: flex-start;
     padding-left: 32px;
+    text-align: left;
+    & > div
+        display: inline-block;
     & > div:not(:last-child)
         margin-right: 44px;
 
@@ -69,7 +70,7 @@
     width: 48.9%;
     img 
         position: absolute;
-        top: -365px;
+        top: -99%;
         right: -2%;
         width: 100%;
 /* **************************** */
@@ -111,7 +112,7 @@
     overflow: hidden;
 
 .login__inner
-    padding: 100px 0;
+    padding: 15.5% 0 100px 0;
 
 .login__main
     position: relative;
@@ -119,13 +120,8 @@
     justify-content: flex-end;
     width: 100%;
 
-.login__figure
-    position: absolute;
-    top: -5%;
-    left: -2.7%;
-
 .login__meta
-    max-width: 515px;
+    width: 57.5%;
     text-align: right;
 
 .login__helper
@@ -133,12 +129,19 @@
 
 // @extend .login__title
 .login__title
-    margin: 21.3% 0 21px 0;
+    margin-bottom: 21px;
 
 // @extend .menu__text
 .login__text
     font-size: 15px;
     word-spacing: 3px;
+.login__figure
+    width: 48%;
+    order: -1;
+    img 
+        position: absolute;
+        top: -40%;
+        left: -2.7%;
 /* **************************** */
 // login section end
 /* **************************** */
@@ -153,7 +156,7 @@
     overflow: hidden;
 
 .menu__inner
-    padding: 100px 0 110px 0;
+    padding: 14.5% 0 110px 0;
 
 .menu__main
     position: relative;
@@ -161,19 +164,22 @@
     width: 100%;
 
 .menu__meta
-    max-width: 515px;
+    width: 57.5%;
 
 .menu__title
     @extend .login__title;
-    margin-top: 19.6%;
 
 .menu__text 
     @extend .login__text;
 
 .menu__figure
-    position: absolute;
-    top: -5%;
-    right: -3.7%;
+    position: relative;
+    width: 48%;
+    img
+        position: absolute;
+        top: -36%;
+        right: -8.7%; 
+
 /* **************************** */
 // menu section end 
 /* **************************** */
@@ -194,7 +200,7 @@
     text-align: center;
     color: #fff;
 
-@import 'components/gallary.styl';
+@import 'components/gallary/gallary.styl';
 /* **************************** */
 // gallary end
 /* **************************** */
@@ -210,7 +216,7 @@
 .test__inner
     padding: 51px 0;
 
-@import 'components/slider.styl';
+@import 'components/slider/slider.styl';
 /* **************************** */
 // testimonial end
 /* **************************** */
@@ -247,12 +253,10 @@
         word-spacing: 3px;
 
 .news__form
-    .news__row
-        display: flex;
     .news__col
-        width: 50%;
+        display: inline-block;
         &:not(:last-child)
-            margin-right: 16px;
+            margin-right: 13px;
     label 
         display: inline-block;
         width: 0;
@@ -284,7 +288,9 @@
 /* **************************** */
 // footer
 /* **************************** */
-@import 'components/footer.styl';
+@import 'components/footer/footer.styl';
 /* **************************** */
 // footer end
 /* **************************** */
+
+@import 'media/media.styl';
