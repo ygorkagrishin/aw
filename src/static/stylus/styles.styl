@@ -5,6 +5,24 @@
 @import 'common/common_styles.styl';
 
 
+/* **************************** */
+// header 
+/* **************************** */
+@import 'components/header.styl';
+/* **************************** */
+// header end 
+/* **************************** */
+
+
+/* **************************** */
+// menu 
+/* **************************** */
+@import 'components/menu.styl';
+/* **************************** */
+// menu end 
+/* **************************** */
+
+
 
 /* **************************** */
 // hero 
@@ -14,16 +32,17 @@
     overflow: hidden;
 
 .hero__inner
-    padding: 160px 0;
+    padding: 30.4% 0 163px 0;
 
 .hero__main
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
 .hero__meta
-    max-width: 540px;
+    max-width: 450px;
     text-align: right;
     color: #fff;
 
@@ -33,11 +52,21 @@
     text-transform: uppercase;
 
 .hero__text
-    font: 15px raleWayReg;
+    font: 13px / 17px raleWaySemiBold;
+    word-spacing: 1.5px;
+    &:not(:last-child)
+        margin-bottom: 43px;
+
+.hero__btn
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 32px;
+    & > div:not(:last-child)
+        margin-right: 44px;
 
 .hero__figure
     position: absolute;
-    top: 0;
+    top: -98%;
     right: -1%;
 /* **************************** */
 // hero end
@@ -98,9 +127,11 @@
 .login__helper
     margin-right: -7px;
 
+// @extend .login__title
 .login__title
     margin: 21.3% 0 21px 0;
 
+// @extend .menu__text
 .login__text
     font-size: 15px;
     word-spacing: 3px;
@@ -114,15 +145,16 @@
 // menu section
 /* **************************** */
 .menu
-    @extend .login;
     background-color: primaryGrey;
+    overflow: hidden;
 
 .menu__inner
     padding: 100px 0 110px 0;
 
 .menu__main
-    @extend .login__main;
-    justify-content: flex-start;
+    position: relative;
+    display: flex;
+    width: 100%;
 
 .menu__meta
     max-width: 515px;

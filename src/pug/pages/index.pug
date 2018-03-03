@@ -6,10 +6,12 @@ block title
 block content
     main.page__cont
         
+        include ../includes/header.pug
+
         // hero 
         section.hero
             .hero__inner
-                article.container
+                article.container.container_size_m
                     .hero__main
                         .hero__meta
                             h1.hero__title a &amp w
@@ -22,9 +24,9 @@ block content
                                 | Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
                             .hero__btn.btn
                                 div
-                                    a(href="javascript:void(0);") Download
+                                    a(href="javascript:void(0);").btn__type_download Download
                                 div
-                                    a(href="javascript:void(0);") Lear more
+                                    a(href="javascript:void(0);").btn__type_more Learn more
                         .hero__figure
                             img(src="image/content/hero/white_phone.png", alt="iphone white pic")
         // hero end
