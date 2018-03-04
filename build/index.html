@@ -5,13 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> aw 
     </title>
-    <meta name="description" content="take website free templates">
+    <meta name="description" content="aw website free templates">
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="styles.css">
   </head>
 </html>
 <body class="page">
   <main class="page__cont">
+    <div class="page__nav js-nav">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <!-- Home-->
+          <li> <a href="javascript:void(0);" data-sect="hero">Home</a></li>
+          <!-- Home end-->
+          <!-- Features-->
+          <li> <a href="javascript:void(0);" data-sect="features">Features</a></li>
+          <!-- Features end-->
+          <!-- Login page-->
+          <li> <a href="javascript:void(0);" data-sect="login">Login page</a></li>
+          <!-- Login page end-->
+          <!-- Menu-->
+          <li> <a href="javascript:void(0);" data-sect="menu">Menu</a></li>
+          <!-- Menu end-->
+          <!-- Gallary-->
+          <li> <a href="javascript:void(0);" data-sect="gallary">Gallary</a></li>
+          <!-- Gallary end-->
+          <!-- Testimonial-->
+          <li> <a href="javascript:void(0);" data-sect="testimonial">Testimonial</a></li>
+          <!-- Testimonial end-->
+          <!-- Our news-->
+          <li> <a href="javascript:void(0);" data-sect="news">Our news</a></li>
+          <!-- Our news end-->
+          <!-- Other-->
+          <li> <a href="javascript:void(0);" data-sect="footer">Other</a></li>
+          <!-- Other end-->
+        </ul>
+        <div class="main-nav__close">
+          <div class="js-nav__close-trigger"></div>
+        </div>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__inner">
         <div class="container">
@@ -21,7 +54,7 @@
                 <div class="js-b-menu"></div>
               </div>
             </div>
-            <div class="header__search"><img src="image/general/search/search.png" alt="search">
+            <div class="header__search js-search"><img src="image/general/search/search.png" alt="search">
               <label for="search">Search</label>
               <input type="text" id="search">
             </div>
@@ -30,7 +63,7 @@
       </div>
     </header>
     <!-- hero -->
-    <section class="hero">
+    <section class="hero js-sect" data-anchor="hero">
       <div class="hero__inner">
         <article class="container container_size_m">
           <div class="hero__main">
@@ -56,7 +89,7 @@
     </section>
     <!-- hero end-->
     <!-- features-->
-    <section class="feat">
+    <section class="feat js-sect" data-anchor="features">
       <section class="feat__top">
         <div class="feat__inner">
           <div class="container">
@@ -72,7 +105,7 @@
         </div>
       </section>
       <!-- login-->
-      <section class="login">
+      <section class="login js-sect" data-anchor="login">
         <div class="login__inner">
           <article class="container container_size_m">
             <div class="login__main">
@@ -98,7 +131,7 @@
       </section>
       <!-- login end-->
       <!-- menu-->
-      <section class="menu">
+      <section class="menu js-sect" data-anchor="menu">
         <div class="menu__inner">
           <article class="container container_size_m">
             <div class="menu__main">
@@ -126,7 +159,7 @@
     </section>
     <!-- features end-->
     <!-- app gallery-->
-    <section class="gal">
+    <section class="gal js-sect" data-anchor="gallary">
       <div class="gal__inner">
         <article class="container">
           <div class="gal__header section__header"><span>Check out</span>
@@ -154,7 +187,7 @@
     </section>
     <!-- app gallery end  -->
     <!-- testimonial-->
-    <section class="test">
+    <section class="test js-sect" data-anchor="testimonial">
       <div class="test__inner">
         <article class="container">   
           <div class="caro" id="carousel">
@@ -224,7 +257,7 @@
     </section>
     <!-- testimonial end-->
     <!-- newsletter-->
-    <section class="news">
+    <section class="news js-sect" data-anchor="news">
       <div class="news__inner">
         <article class="container container_size_m">
           <div class="news__main">
@@ -255,7 +288,7 @@
     </section>
     <!--newsletter end-->
     <!-- footer-->
-    <footer class="footer footer__helper">
+    <footer class="footer footer__helper js-sect" data-anchor="footer">
       <div class="footer__inner"> 
         <article class="container">  
           <div class="footer__main footer__helper">
@@ -284,3 +317,5 @@
     <!-- footer end-->
   </main>
 </body>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="main.js"></script>
