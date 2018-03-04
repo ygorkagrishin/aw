@@ -15,10 +15,26 @@
         width: 100%;
         text-align: center;
 
+.hero__title
+    @media ( max-width 375px )
+        font-size: 46px;
+
+.hero__text
+    @media ( max-width 375px )
+        font-size: 12px;
+        line-height: 16px;
+
 .hero__btn
     @media ( max-width 1024px )
         padding: 0;
         text-align: center;
+    @media ( max-width 375px )
+        div
+            width: 100%;
+        & > div:not(:last-child)
+            margin: 0;
+            margin-bottom: 7%;
+
 
 .hero__figure  
     @media ( max-width 1024px )
@@ -26,6 +42,25 @@
 /* **************************** */
 // hero end 
 /* **************************** */
+
+
+
+/* **************************** */
+// feature 
+/* **************************** */
+.feat__title
+    @media ( max-width 420px )
+        font-size: 18px;
+
+.feat__text
+    @media ( max-width 420px )
+        font-size: 12px;
+        line-height: 20px;
+
+/* **************************** */
+// feature end 
+/* **************************** */
+
 
 
 /* **************************** */
@@ -43,20 +78,43 @@
         padding: 20% 0;
         & > div
             width: 100%;
+    @media ( max-width 540px )
+        height: auto;
 
 .login__meta
     @media ( max-width 840px )
         text-align: center;
         order: -1;
 
+.login__helper
+    @media ( max-width 840px )
+        margin: 0;
+
+.login__title
+    @media ( max-width 768px )
+        margin-bottom: 3%;
+        font-size: 28px;
+    @media ( max-width 420px )
+        margin-bottom: 7%;
+        font-size: 18px;
+
+.login__text
+    @media ( max-width 540px )
+        font-size: 14px;
+    @media ( max-width 420px )
+        font-size: 12px;
+        line-height: 24px;
+
 .login__figure
     @media ( max-width 840px )
         order: 1;
+    @media ( max-width 540px )
+        display: none;
 
 .login__figure img
     @media ( max-width 840px )
         top: 45%;
-        left: 29.3%;
+        left: 27.3%;
 /* **************************** */
 // login end
 /* **************************** */
@@ -81,6 +139,18 @@
 .menu__meta
     @media ( max-width 840px )
         @extend .login__meta;
+
+.menu__title
+    @media ( max-width 768px )
+        @extend .login__title;
+
+.menu__text
+    @media ( max-width 540px )
+        @extend .login__text;
+
+.menu__figure
+    @media ( max-width 540px )
+        display: none;
 
 .menu__figure img
     @media ( max-width 840px )
@@ -108,6 +178,18 @@
         @extend .login__meta;
         margin-bottom: 5%;
 
+.news__title
+    @media ( max-width 480px )
+        font-size: 24px;
+    @media ( max-width 375px )
+        font-size: 18px;
+
+.news__meta span 
+    @media ( max-width 480px )
+        font-size: 16px;
+    @media ( max-width 375px )
+        font-size: 12px;
+
 .news__form
     @media ( max-width 840px )
         text-align: center;
@@ -115,6 +197,57 @@
             margin-bottom: 10%;
         .news__helper
             margin: 0;
+    .news__row
+        @media ( max-width 480px )
+            margin-bottom: 20%; 
+            & > div:not(:last-child)
+                margin: 0;
+                margin-bottom: 7%;
+    .news__col
+        @media ( max-width 480px )
+            display: block;
 /* **************************** */
 // news end 
+/* **************************** */
+
+
+
+/* **************************** */
+// gallery
+/* **************************** */
+.gal
+    @media ( max-width 540px )
+        display: none;
+
+.gal__inner
+    @media ( max-width 840px )
+        padding: 10% 0;
+    
+.gal__header
+    @media ( max-width 768px )
+        margin-bottom: 5%;
+    span
+        @media ( max-width 768px )
+            font-size: 18px;
+    .gal__title
+        @media ( max-width 768px )
+            font-size: 28px;
+/* **************************** */
+// gallery end
+/* **************************** */
+
+
+
+/* **************************** */
+// testimonial
+/* **************************** */
+.test
+    @media ( max-width 540px )
+        background-color: #fff;
+
+.test__inner
+    @media ( max-width 840px )
+        padding: 10% 0;
+/* **************************** */
+// testimonial end
 /* **************************** */
