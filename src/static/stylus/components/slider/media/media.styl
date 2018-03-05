@@ -3,6 +3,8 @@
         justify-content: center;
     @media ( max-width 540px )
         flex-wrap: wrap;
+    @media ( orientation landscape ) and ( max-width 800px )
+        flex-wrap: wrap;
 
 .caro__img-wrap
     @media ( max-width 1024px )
@@ -22,22 +24,35 @@
         text-align: center;
     @media ( max-width 540px )
         margin-top: 11%;
+    @media ( orientation landscape ) and ( max-width 800px )
+        max-width: 90%;
+        padding: 0;
+        margin-top: 5%;
+        text-align: center;
 
 .caro__name
-    @media ( max-width 375px )
+    @media ( max-width 420px )
         margin-bottom: 5%;
+        font-size: 24px;
+    @media ( orientation landscape ) and ( max-width 800px )
+        margin-bottom: 3%;
         font-size: 24px;
 
 .caro__text
     @media ( max-width 540px )
         font-size: 14px;
         line-height: 24px;
-    @media ( max-width 375px )
+    @media ( max-width 420px )
         font-size: 12px;
         line-height: 22px;
+    @media ( orientation landscape ) and ( max-width 800px )
+        font-size: 14px;
+        line-height: 24px;
 
 .caro__arrow img
     @media ( max-width 540px )
+        width: 70%;
+    @media ( orientation landscape ) and ( max-width 800px )
         width: 70%;
 
 .caro__prev

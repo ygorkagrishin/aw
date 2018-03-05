@@ -5,9 +5,16 @@
 .footer .footer__helper
     @media ( max-width 375px )
         margin: 0;
+    @media ( orientation landscape ) and ( max-width 800px )
+        margin: 0;
 
 .footer__logo
     @media ( max-width 480px )
+        font-size: 20px;
+        vertical-align: 7px;
+        span 
+            font-size: 20px;
+    @media ( orientation landscape ) and ( max-width 800px )
         font-size: 20px;
         vertical-align: 7px;
         span 
@@ -23,7 +30,8 @@
         & > li:not(:last-child)
             margin: 0;
 
-
 .footer__rights
     @media ( max-width 480px )
+        font-size: 12px;
+    @media ( orientation landscape ) and ( max-width 800px )
         font-size: 12px;
