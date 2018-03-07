@@ -7,7 +7,7 @@ trigger.click(openSearch);
 
 function openSearch() {
     if ( !search.hasClass('active') ) 
-        return search.addClass('active'); 
+        return search.addClass('active');
     else 
         return search.removeClass('active');
 }
