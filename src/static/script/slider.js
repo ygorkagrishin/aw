@@ -11,8 +11,7 @@ var carousel = $('#carousel'),
 var animationSpeed = 500,
     pause = 1000;
     currentSlide = 0;
-    slideAmount = slide.length,
-    switchInterval;
+    slideAmount = slide.length;
 
 row.find('.caro__slide:first-child').clone(true).appendTo(row);
     
@@ -68,7 +67,7 @@ carousel.on('touchend', function (e){
 
 function move(){
     row.css({
-        'transition': 'all 0.5s',
+        'transition': 'all '+ animationSpeed +'ms',
         'transform': 'translateX(-'+ currentSlide +'00%)'
     });
 }
