@@ -1,58 +1,86 @@
-var slider = (function () {
+var slide = (function () {
 
 // cache DOM
-var carousel = $('#carousel'),
-    row = carousel.find('.caro__row'),
-    slide = carousel.find('.caro__slide'),
-    prev = carousel.find('.caro__prev'),
-    next = carousel.find('.caro__next');
+var caro = $('#carousel'),
+    row = caro.find('.caro__row'),
+    slide = caro.find('.caro__slide'),
+    prev = caro.find('.caro__prev'),
+    next = caro.find('.caro__next'),
+    len;
+
+    // init clone fist slide
+    slide.first().clone(true).appendTo(row);
+
+    // After cloning an element, update value. 
+    slide = caro.find('.caro__slide');
+    len = slide.length - 1;
+
+// Counters
+var currentSlide = 0;
+    counterSlide = len;
 
 // configuration
 var animationSpeed = 500,
-    pause = 1000;
-    currentSlide = 0;
-    slideAmount = slide.length;
+    pause = 3000;
 
-row.find('.caro__slide:first-child').clone(true).appendTo(row);
+// Interval
+var switchInterval = null,
+    autoPlay = true;
+
+next.on('click', function (){
+    if ( autoPlay ) 
+        clearInterval( switchInterval );
     
-next.on('click', nextSlide);
+    nextSlide();
+});
 
 function nextSlide(){
-    if ( slideAmount - 1 >= currentSlide ) {
+
+    if ( counterSlide !== currentSlide ) {
         ++currentSlide;
         move();
     }
     else {
-        setTimeout(nextSlide, animationSpeed);
+        setTimeout( nextSlide, 20 );
         currentSlide = 0;
-        def();
+        res();
     }
 };
 
-prev.on('click', prevSlide);
+prev.on('click', function () {
+    if ( autoPlay )
+        clearInterval( switchInterval );
 
-function prevSlide(){
-    if ( currentSlide !== 0 ) {
+    prevSlide();
+});
+
+function prevSlide(e){
+
+    if ( currentSlide !== 0  ) {
         --currentSlide;
         move();
     }
     else {
-        setTimeout(prevSlide, animationSpeed);
-        currentSlide = slideAmount;
-        def();
+        setTimeout( prevSlide, 20 );
+        currentSlide = counterSlide;
+        res();
     }
 };
 
 var x, y, newX, newY;
 
-carousel.on('touchstart', function (e){
+caro.on('touchstart', function (e){
     var touch = e.changedTouches[0];
 
     x = touch.clientX;
     y = touch.clientY;
 });
 
-carousel.on('touchend', function (e){
+caro.on('touchend', function (e){
+
+    if ( autoPlay ) 
+        clearInterval( switchInterval );
+
     var touch = e.changedTouches[0];
 
     newX = touch.clientX;
@@ -65,6 +93,9 @@ carousel.on('touchend', function (e){
             prevSlide();
 });
 
+if ( autoPlay ) 
+    switchInterval = setInterval( nextSlide, pause );
+
 function move(){
     row.css({
         'transition': 'all '+ animationSpeed +'ms',
@@ -72,9 +103,11 @@ function move(){
     });
 }
 
-function def(){
+function res(){
     row.removeAttr('style');
-    row.css( 'transform', 'translateX(-'+ currentSlide +'00%)')
+    row.css({
+        'transform': 'translateX(-'+ currentSlide +'00%)'
+    });
 }
 
 })();
