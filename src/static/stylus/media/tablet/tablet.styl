@@ -1,0 +1,161 @@
+/* **************************** */
+// hero 
+/* **************************** */
+.hero__inner
+    @media ( max-width 1024px )
+        padding: 0;
+
+.hero__main
+    @media ( max-width 1024px )
+        height: 100vh;
+        align-items: center;
+
+.hero__meta
+    @media ( max-width 1024px )
+        width: 100%;
+        text-align: center;
+
+.hero__btn
+    @media ( max-width 1024px )
+        padding: 0;
+        text-align: center;
+
+.hero__figure  
+    @media ( max-width 1024px )
+        display: none;
+/* **************************** */
+// hero end 
+/* **************************** */
+
+
+
+/* **************************** */
+// feature 
+/* **************************** */
+.feat__inner
+    @media ( max-width 840px )
+        padding: 10% 0;    
+/* **************************** */
+// feature end 
+/* **************************** */
+
+
+
+/* **************************** */
+// login 
+/* **************************** */
+.login__inner
+    @media ( max-width 840px )
+        padding: 0;
+
+.login__main
+    @media ( max-width 840px )
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 100vh;
+        padding: 10% 0;
+        & > div
+            width: 100%;
+
+.login__meta
+    @media ( max-width 840px )
+        text-align: center;
+        order: -1;
+
+.login__helper
+    @media ( max-width 840px )
+        margin: 0;
+
+.login__title
+    @media ( max-width 768px )
+        margin-bottom: 3%;
+        font-size: 28px;
+
+.login__figure
+    @media ( max-width 840px )
+        order: 1;
+
+.login__figure img
+    @media ( max-width 840px )
+        top: 45%;
+        left: 27.3%;
+/* **************************** */
+// login end
+/* **************************** */
+
+
+
+/* **************************** */
+// menu
+/* **************************** */
+.menu__inner
+    @media ( max-width 840px )
+        @extend .login__inner;
+
+.menu__main
+    @media ( max-width 840px )
+        @extend .login__main;
+
+.menu__main > div
+    @media ( max-width 840px )
+        width: 100%;
+
+.menu__meta
+    @media ( max-width 840px )
+        @extend .login__meta;
+
+.menu__title
+    @media ( max-width 768px )
+        @extend .login__title;
+
+.menu__figure img
+    @media ( max-width 840px )
+        top: 45%;
+        left: 27.3%;
+/* **************************** */
+// menu end 
+/* **************************** */
+
+
+
+/* **************************** */
+// testimonial
+/* **************************** */
+.test__inner
+    @media ( max-width 840px )
+        padding: 10% 0;
+    @media ( orientation landscape ) and ( max-width 800px )
+        padding: 5% 0;
+/* **************************** */
+// testimonial end
+/* **************************** */
+
+
+
+/* **************************** */
+// news
+/* **************************** */
+.news__inner
+    @media ( max-width 840px )
+        @extend .login__inner;
+
+.news__main
+    @media ( max-width 840px )
+        @extend .login__main;
+        height: auto;
+
+.news__meta
+    @media ( max-width 840px )
+        @extend .login__meta;
+        margin-bottom: 5%;
+
+.news__form
+    @media ( max-width 840px )
+        text-align: center;
+        .news__row
+            margin-bottom: 10%;
+        .news__helper
+            margin: 0;
+/* **************************** */
+// news end 
+/* **************************** */

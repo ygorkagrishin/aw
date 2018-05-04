@@ -9,7 +9,8 @@
 // nav 
 /* **************************** */
 @import 'components/main-nav/main-nav.styl';
-@import 'components/main-nav/media/media.styl'; 
+@import 'components/main-nav/tablet/tablet.styl';
+@import 'components/main-nav/mobile/mobile.styl';
 /* **************************** */
 // nav end 
 /* **************************** */
@@ -20,7 +21,8 @@
 // header 
 /* **************************** */
 @import 'components/header/header.styl';
-@import 'components/header/media/media.styl';
+@import 'components/header/tablet/tablet.styl';
+@import 'components/header/mobile/mobile.styl';
 /* **************************** */
 // header end 
 /* **************************** */
@@ -31,11 +33,35 @@
 // menu 
 /* **************************** */
 @import 'components/menu/menu.styl';
+@import 'components/menu/tablet/tablet.styl';
+@import 'components/menu/mobile/mobile.styl';
 /* **************************** */
 // menu end 
 /* **************************** */
 
 
+
+/* **************************** */
+// slider 
+/* **************************** */
+@import 'components/slider/slider.styl';
+@import 'components/slider/tablet/tablet.styl';
+@import 'components/slider/mobile/mobile.styl';
+/* **************************** */
+// slider end 
+/* **************************** */
+
+
+
+/* **************************** */
+// footer
+/* **************************** */
+@import 'components/footer/footer.styl';
+@import 'components/footer/tablet/tablet.styl';
+@import 'components/footer/mobile/mobile.styl';
+/* **************************** */
+// footer end
+/* **************************** */
 
 /* **************************** */
 // hero 
@@ -200,28 +226,6 @@
 
 
 /* **************************** */
-// gallary
-/* **************************** */
-.gal
-    background: primaryBlue url('image/content/gallary/gallary_bg.png') no-repeat center / cover;
-
-.gal__inner
-    padding: 80px 0;
-
-.gal__header
-    margin-bottom: 40px;
-    text-align: center;
-    color: #fff;
-
-@import 'components/gallary/gallary.styl';
-@import 'components/gallary/media/media.styl';
-/* **************************** */
-// gallary end
-/* **************************** */
-
-
-
-/* **************************** */
 // testimonial
 /* **************************** */
 .test
@@ -229,9 +233,6 @@
 
 .test__inner
     padding: 51px 0;
-
-@import 'components/slider/slider.styl';
-@import 'components/slider/media/media.styl';
 /* **************************** */
 // testimonial end
 /* **************************** */
@@ -298,15 +299,5 @@
 // newsletter end
 /* **************************** */
 
-
-
-/* **************************** */
-// footer
-/* **************************** */
-@import 'components/footer/footer.styl';
-@import 'components/footer/media/media.styl';
-/* **************************** */
-// footer end
-/* **************************** */
-
-@import 'media/media.styl';
+@import 'media/tablet/tablet.styl';
+@import 'media/mobile/mobile.styl';
