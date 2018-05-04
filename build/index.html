@@ -13,8 +13,8 @@
 <body class="page">
   <main class="page__cont">
     <div class="page__nav js-nav">
-      <nav class="main-nav">
-        <ul class="main-nav__list">
+      <nav class="nav">
+        <ul class="nav__list">
           <!-- Home-->
           <li> <a href="javascript:void(0);" data-sect="hero">Home</a></li>
           <!-- Home end-->
@@ -37,8 +37,8 @@
           <li> <a href="javascript:void(0);" data-sect="footer">Other</a></li>
           <!-- Other end-->
         </ul>
-        <div class="main-nav__close">
-          <div class="js-nav__close-trigger"></div>
+        <div class="nav__close">
+          <div class="js-nav-close-trig"></div>
         </div>
       </nav>
     </div>
@@ -51,16 +51,17 @@
                 <div class="js-b-menu"></div>
               </div>
             </div>
-            <div class="header__search js-search"><img class="js-search-trigger" src="image/general/search/search.png" alt="search">
+            <div class="header__search js-search"><img src="image/general/search/search.png" alt="search">
               <label for="search">Search</label>
               <input type="text" id="search">
+              <div class="js-search-trig"></div>
             </div>
           </div>
         </div>
       </div>
     </header>
     <!-- hero -->
-    <section class="hero js-sect" data-anchor="hero">
+    <section class="hero sect js-sect" data-anchor="hero">
       <div class="hero__inner">
         <article class="container container_size_m">
           <div class="hero__main">
@@ -86,7 +87,7 @@
     </section>
     <!-- hero end-->
     <!-- features-->
-    <section class="feat js-sect" data-anchor="features">
+    <section class="feat sect js-sect" data-anchor="features">
       <section class="feat__top">
         <div class="feat__inner">
           <div class="container">
@@ -158,77 +159,79 @@
     <!-- app gallery-->
     <!-- app gallery end  -->
     <!-- testimonial-->
-    <section class="test js-sect" data-anchor="testimonial">
+    <section class="test sect js-sect" data-anchor="testimonial">
       <div class="test__inner">
         <article class="container">   
           <div class="caro" id="carousel">
             <div class="caro__wrap">
-              <div class="caro__row">
-                <!-- slide-1-->
-                <div class="caro__slide">
-                  <blockquote class="caro__blockquote">
-                    <div class="caro__border">
-                      <div class="caro__img-wrap"><img src="image/content/carousel/11790_323402264452072_952296840_n.png" alt="slide ava"></div>
-                    </div>
-                    <div class="caro__meta">
-                      <h3 class="caro__name">Alif noor</h3>
-                      <p class="caro__text">
-                        Love this app! Proin gravida nibh vel velit auctor aliquet. 
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, 
-                        nec sagittis sem nibh id elit. 
-                        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
-                      </p>
-                    </div>
-                  </blockquote>
-                </div>
-                <!-- slide-1 end-->
-                <!-- slide-2-->
-                <div class="caro__slide">
-                  <blockquote class="caro__blockquote">
-                    <div class="caro__border">
-                      <div class="caro__img-wrap"><img src="image/content/carousel/11790_323402264452072_952296840_n.png" alt="slide ava"></div>
-                    </div>
-                    <div class="caro__meta">
-                      <h3 class="caro__name">Alif poor</h3>
-                      <p class="caro__text">
-                        Love this app! Proin gravida nibh vel velit auctor aliquet. 
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, 
-                        nec sagittis sem nibh id elit. 
-                        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
-                      </p>
-                    </div>
-                  </blockquote>
-                </div>
-                <!-- slide-2 end-->
-                <!-- slide-3-->
-                <div class="caro__slide">
-                  <blockquote class="caro__blockquote">
-                    <div class="caro__border">
-                      <div class="caro__img-wrap"><img src="image/content/carousel/11790_323402264452072_952296840_n.png" alt="slide avat"></div>
-                    </div>
-                    <div class="caro__meta">
-                      <h3 class="caro__name">Alif goor</h3>
-                      <p class="caro__text">
-                        Love this app! Proin gravida nibh vel velit auctor aliquet. 
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, 
-                        nec sagittis sem nibh id elit. 
-                        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
-                      </p>
-                    </div>
-                  </blockquote>
-                </div>
-                <!-- slide-3 end-->
+              <!-- slide-1-->
+              <div class="caro__slide">
+                <blockquote class="caro__blockquote">
+                  <div class="caro__border">
+                    <div class="caro__img-wrap"><img src="image/content/carousel/11790_323402264452072_952296840_n.png" alt="slide ava"></div>
+                  </div>
+                  <div class="caro__meta">
+                    <h3 class="caro__name">Alif noor</h3>
+                    <p class="caro__text">
+                      Love this app! Proin gravida nibh vel velit auctor aliquet. 
+                      Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, 
+                      nec sagittis sem nibh id elit. 
+                      Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+                    </p>
+                  </div>
+                </blockquote>
               </div>
+              <!-- slide-1 end-->
+              <!-- slide-2-->
+              <div class="caro__slide">
+                <blockquote class="caro__blockquote">
+                  <div class="caro__border">
+                    <div class="caro__img-wrap"><img src="image/content/carousel/11790_323402264452072_952296840_n.png" alt="slide ava"></div>
+                  </div>
+                  <div class="caro__meta">
+                    <h3 class="caro__name">Alif poor</h3>
+                    <p class="caro__text">
+                      Love this app! Proin gravida nibh vel velit auctor aliquet. 
+                      Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, 
+                      nec sagittis sem nibh id elit. 
+                      Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <!-- slide-2 end-->
+              <!-- slide-3-->
+              <div class="caro__slide">
+                <blockquote class="caro__blockquote">
+                  <div class="caro__border">
+                    <div class="caro__img-wrap"><img src="image/content/carousel/11790_323402264452072_952296840_n.png" alt="slide avat"></div>
+                  </div>
+                  <div class="caro__meta">
+                    <h3 class="caro__name">Alif goor</h3>
+                    <p class="caro__text">
+                      Love this app! Proin gravida nibh vel velit auctor aliquet. 
+                      Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, 
+                      nec sagittis sem nibh id elit. 
+                      Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <!-- slide-3 end-->
             </div>
-            <div class="caro__prev caro__arrow"><img src="image/content/carousel/prev.png" alt="arrow prev"></div>
-            <div class="caro__next caro__arrow"><img src="image/content/carousel/next.png" alt="arrow next"></div>
+          </div>
+          <div class="caro__prev caro__arrow"><img src="image/content/carousel/prev.png" alt="arrow prev">
+            <div class="js-caro-arrow js-caro-arrow-prev"></div>
+          </div>
+          <div class="caro__next caro__arrow"><img src="image/content/carousel/next.png" alt="arrow next">
+            <div class="js-caro-arrow js-caro-arrow-next"></div>
           </div>
         </article>
       </div>
     </section>
     <!-- testimonial end-->
     <!-- newsletter-->
-    <section class="news js-sect" data-anchor="news">
+    <section class="news sect js-sect" data-anchor="news">
       <div class="news__inner">
         <article class="container container_size_m">
           <div class="news__main">

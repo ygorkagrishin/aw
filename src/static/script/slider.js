@@ -2,14 +2,14 @@ var slide = (function () {
 
 // cache DOM
 var caro = $('#carousel'),
-    row = caro.find('.caro__row'),
+    wrap = caro.find('.caro__wrap'),
     slide = caro.find('.caro__slide'),
-    prev = caro.find('.caro__prev'),
-    next = caro.find('.caro__next'),
+    prev = $('.js-caro-arrow-prev'),
+    next = $('.js-caro-arrow-next'),
     len;
 
     // init clone fist slide
-    slide.first().clone(true).appendTo(row);
+    slide.first().clone(true).appendTo(wrap);
 
     // After cloning an element, update value. 
     slide = caro.find('.caro__slide');
@@ -28,17 +28,14 @@ var switchInterval = null,
     autoPlay = true;
 
 next.on('click', function (){
-    if ( autoPlay ) 
-        clearInterval( switchInterval );
-    
+    if (autoPlay) clearInterval(switchInterval);
     nextSlide();
 });
 
 function nextSlide(){
 
-    if ( counterSlide !== currentSlide ) {
-        ++currentSlide;
-        move();
+    if (counterSlide !== currentSlide) {
+        ++currentSlide; move();
     }
     else {
         setTimeout( nextSlide, 20 );
@@ -48,20 +45,17 @@ function nextSlide(){
 };
 
 prev.on('click', function () {
-    if ( autoPlay )
-        clearInterval( switchInterval );
-
+    if (autoPlay) clearInterval(switchInterval);
     prevSlide();
 });
 
 function prevSlide(e){
 
-    if ( currentSlide !== 0  ) {
-        --currentSlide;
-        move();
+    if (currentSlide !== 0) {
+        --currentSlide; move();
     }
     else {
-        setTimeout( prevSlide, 20 );
+        setTimeout(prevSlide, 20);
         currentSlide = counterSlide;
         res();
     }
@@ -77,35 +71,31 @@ caro.on('touchstart', function (e){
 });
 
 caro.on('touchend', function (e){
-
-    if ( autoPlay ) 
-        clearInterval( switchInterval );
+    if (autoPlay) clearInterval(switchInterval);
 
     var touch = e.changedTouches[0];
 
     newX = touch.clientX;
     newY = touch.clientY;
 
-    if ( Math.abs( x - newX ) >= Math.abs( y - newY ) ) 
-        if ( x > newX )
-            nextSlide();
-        else if ( newX > x )
-            prevSlide();
+    if (Math.abs(y - newY) >= Math.abs( x - newX )) return;
+
+    x > newX ? nextSlide() : prevSlide();
 });
 
-if ( autoPlay ) 
+if (autoPlay) 
     switchInterval = setInterval( nextSlide, pause );
 
 function move(){
-    row.css({
+    wrap.css({
         'transition': 'all '+ animationSpeed +'ms',
         'transform': 'translateX(-'+ currentSlide +'00%)'
     });
 }
 
 function res(){
-    row.removeAttr('style');
-    row.css({
+    wrap.removeAttr('style');
+    wrap.css({
         'transform': 'translateX(-'+ currentSlide +'00%)'
     });
 }

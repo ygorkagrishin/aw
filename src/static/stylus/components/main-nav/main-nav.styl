@@ -8,14 +8,14 @@
     height: 100%;
     background-color: rgba(primaryBlack,.9);
 
-.main-nav
+.nav
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-.main-nav__list
+.nav__list
     text-align: center;
     li
         padding: 24px 0;
@@ -25,10 +25,10 @@
         font-size: 24px;
         color: #fff;
 
-.main-nav__close
+.nav__close
     position: absolute;
-    top: 14.1%;
-    right: 11.8%;
+    top: 5%;
+    right: 5%;
     &::before
         content: '';
         display: block;
@@ -44,7 +44,7 @@
         background-color: primaryGrey;
         transform: rotate(45deg) translate(-4px,-4px);
     
-.js-nav__close-trigger
+.js-nav-close-trig
     position: absolute;
     top: -20px;
     left: -11px;
@@ -54,3 +54,6 @@
 
 .page__nav.active
     display: block;
+
+.nav-open
+    overflow: hidden !important;

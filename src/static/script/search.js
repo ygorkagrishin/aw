@@ -1,15 +1,13 @@
 var search = (function () {
 
 var search = $('.header__search'),
-    trigger = search.find('.js-search-trigger');
+    trigger = search.find('.js-search-trig');
 
-trigger.click(openSearch);
+trigger.click(handler);
 
-function openSearch() {
-    if ( !search.hasClass('active') ) 
-        return search.addClass('active');
-    else 
-        return search.removeClass('active');
+function handler() {
+    !search.hasClass('active') ? search.addClass('active') : 
+    search.removeClass('active');
 }
 
 })();

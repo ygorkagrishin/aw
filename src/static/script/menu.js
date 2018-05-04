@@ -1,29 +1,33 @@
 var menu = (function () {
 
 var body = $('body'),
-    open = body.find('.js-b-menu'),
-    navigator = body.find('.js-nav'),
-    link = navigator.find('li > a'),
-    sect = body.find('.js-sect'),
-    close = navigator.find('.js-nav__close-trigger');
+    open = $('.js-b-menu'),
+    menu = $('.js-nav'),
+    link = menu.find('li > a'),
+    sect = $('.js-sect'),
+    close = menu.find('.js-nav-close-trig');
 
-open.click(openMenu);
+open.on('click', openMenu);
 
 function openMenu() {
-    if ( !navigator.hasClass('active') ) 
-        return navigator.addClass('active');
+    scrollLock();
+
+    if ( !menu.hasClass('active') ) 
+        return menu.addClass('active');
 }
 
-close.click(closeMenu);
+close.on('click', closeMenu);
 
 function closeMenu() {
-    if ( navigator.hasClass('active') ) 
-        return navigator.removeClass('active');
+    scrollLock();
+
+    if ( menu.hasClass('active') ) 
+        return menu.removeClass('active');
 }
 
-link.click(moveSect);
+link.on('click', moveTo);
 
-function moveSect(e) {
+function moveTo(e) {
     e.preventDefault();
 
     var attr = $(this).attr('data-sect'), offsetTop;
@@ -37,6 +41,17 @@ function moveSect(e) {
     closeMenu();
 
     $('html,body').animate({ scrollTop : offsetTop }, 700)
+}
+
+function scrollLock() {
+    if (body.hasClass('nav-open')) {
+        body.removeClass('nav-open');
+        body.unbind('touchmove');
+    }
+    else {
+        body.addClass('nav-open');
+        body.on('touchmove', function (e) { e.preventDefault();}, false);
+    }
 }
 
 })();
